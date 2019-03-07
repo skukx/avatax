@@ -81,7 +81,7 @@ client.transactions.find_by_id('my_company', '123')
 params = {
   adjustmentReason: 8,
   adjustmentDescription: 'New line item.',
-  new_transaction: { ... }
+  newTransaction: { ... }
 }
 
 client.transactions.adjust('my_company', 'my_code', params)
