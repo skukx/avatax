@@ -1,6 +1,6 @@
 require 'active_support/all'
 require 'faraday'
-require 'faraday_middleware'
+require 'faraday/net_http_persistent'
 
 require 'avatax/version'
 require 'avatax/code'

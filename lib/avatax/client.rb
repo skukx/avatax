@@ -70,11 +70,7 @@ module Avatax
     def build_default_connection
       Faraday.new(url: @configuration.base_url) do |conn|
         conn.request :json
-        conn.request(
-          :basic_auth,
-          @configuration.username,
-          @configuration.password
-        )
+        conn.request :authorization, :basic, @configuration.username, @configuration.password
 
         conn.headers = @configuration.headers
 
